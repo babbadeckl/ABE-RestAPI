@@ -1,3 +1,6 @@
+
+<span style="color:red">CURRENTLY IN DEVELOPMENT - SEVERAL BUGS ARE REMAINING</span>.
+
 # ABE - RestAPI
 
 This is a C++ Rest API for Attribute Based Encryption using [zeutro's openabe library](https://github.com/zeutro/openabe).
