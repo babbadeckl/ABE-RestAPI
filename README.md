@@ -40,7 +40,7 @@ Press ENTER to exit.
 
 ```
 Afterwards the restserver should be running on localhost (Port 12345) (host and port can be changed in main.cpp)  
-Once you've confirmed that the server is running you can test the functionality by executing the test script in the root directory.
+Once you've confirmed that the server is running you can test the functionality by executing the test script in the tests directory.
 
 ```
 python3 test_ABE_API.py
@@ -110,3 +110,7 @@ params:
 * `key`: the user's generated Key.   
 ***Note: KP-Keys can only be used for decrypting KP-Ciphertexts. Same counts for CP-Keys.***
 * `ciphertext`: the ciphertext that should be decrypted
+
+Example:
+* KP-ABE: `decrypt?scheme=kp&key=<YOUR KEY HERE>&ciphertext=<CIPHERTEXT HERE>`
+* CP-ABE: `decrypt?scheme=cp&key=<YOUR KEY HERE>&ciphertext=<CIPHERTEXT HERE>`
