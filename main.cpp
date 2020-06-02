@@ -9,9 +9,6 @@ using namespace http;
 using namespace utility;
 using namespace http::experimental::listener;
 
-
-
-
 std::unique_ptr<handler> g_httpHandler;
 
 void on_initialize(const string_t& address)
