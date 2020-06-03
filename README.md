@@ -43,7 +43,7 @@ Afterwards the restserver should be running on localhost (Port 12345) (host and 
 Once you've confirmed that the server is running you can test the functionality by executing the test script in the tests directory.
 
 ```
-python3 test_ABE_API.py
+python3 ABE_API_test.py
 ```
 
 If you've installed everything correctly it should output following:
