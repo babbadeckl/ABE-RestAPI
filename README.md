@@ -5,16 +5,16 @@
 A C++ Rest API for Attribute Based Encryption using [zeutro's openabe library](https://github.com/zeutro/openabe).
 It supports Encryption, Decryption and Key Generation for Key-Policy Attribute Based Encryption (KP-ABE) as well as for Ciphertext-Policy Attribute Based Encryption (CP-ABE).
 
-# Docker Image / Container setup
+## Docker Image / Container setup
 
 ```
 $ docker pull babbadeckl/abe-api:v1.0
 $ docker run -p <port>:12345 -it babbadeckl/abe-api:v1.0
 ```
 
-# Manual Installation
+## Manual Installation
 
-## Requirements
+### Requirements
 ---
 * [Microsoft's C++ REST SDK](https://github.com/microsoft/cpprestsdk)
 * [OpenSSL](https://www.openssl.org/source/) (Version 1.1.1f)
@@ -23,7 +23,7 @@ $ docker run -p <port>:12345 -it babbadeckl/abe-api:v1.0
 * [Python3](https://www.python.org/download/releases/3.0/)
   * [Requests library](https://pypi.org/project/requests/)
 
-## Installation
+### Installation
 ---
 ```
 $ git clone https://github.com/babbadeckl/ABE-RestAPI
@@ -37,7 +37,7 @@ $ cmake ..
 $ make
 ```
 
-## Usage
+### Usage
 ---
 
 To run the server execute following command in the build directory:
@@ -71,10 +71,10 @@ If you've installed everything correctly it should output following:
 	[+] Test: Decryption with wrong attributes should fail [PASSED]
 ```
 
-## API Functions
+### API Functions
 ---
 
-### Key Generation
+#### Key Generation
 Generates a key for a user. Depending on the used scheme, the key is either based on Policy Trees (KP-ABE) or Attribute Lists (CP-ABE) (find more info about how to specify the attribute field [in the official zeutro ABE documentation (Chapter 2.3)](https://github.com/zeutro/openabe/blob/master/docs/libopenabe-v1.0.0-api-doc.pdf))
 
 ```
@@ -90,7 +90,7 @@ Example:
 * Key-Policy ABE: `gen_attribute_keys?scheme=kp&attribute=Doctor and Floor>=2`
 * Ciphertext-Policy ABE: `gen_attribute_keys?scheme=cp&attribute=Doctor|Floor=2`
 
-### Encryption
+#### Encryption
 Encrypts a specified plaintext with under certain key. For KP-ABE this key can be just a list of attributes separated by a \``|`\`. For CP-ABE it can also be a Policy Tree including boolean formulas.
 
 ```
@@ -107,7 +107,7 @@ params:
 Example:
 * KP-ABE: `encrypt?scheme=kp&key=Doctor|Floor=2&plaintext=Hello World!`
 * CP-ABE: `encrypt?scheme=cp&key=Doctor and Floor<=4&plaintext=Hello World!`
-### Decryption
+#### Decryption
 Decrypts a specified ciphertext with the user's previously generated key. 
 
 ```
