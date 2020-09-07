@@ -5,6 +5,15 @@
 A C++ Rest API for Attribute Based Encryption using [zeutro's openabe library](https://github.com/zeutro/openabe).
 It supports Encryption, Decryption and Key Generation for Key-Policy Attribute Based Encryption (KP-ABE) as well as for Ciphertext-Policy Attribute Based Encryption (CP-ABE).
 
+# Docker Image / Container setup
+
+```
+$ docker pull babbadeckl/abe-api:v1.0
+$ docker run -p <port>:12345 -it babbadeckl/abe-api:v1.0
+```
+
+# Manual Installation
+
 ## Requirements
 ---
 * [Microsoft's C++ REST SDK](https://github.com/microsoft/cpprestsdk)
