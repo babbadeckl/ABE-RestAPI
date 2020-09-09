@@ -91,7 +91,7 @@ Example:
 * Ciphertext-Policy ABE: `gen_attribute_keys?scheme=cp&attribute=Doctor|Floor=2`
 
 #### Encryption
-Encrypts a specified plaintext with under certain key. For KP-ABE this key can be just a list of attributes separated by a \``|`\`. For CP-ABE it can also be a Policy Tree including boolean formulas.
+Encrypts a specified plaintext with a certain key. For KP-ABE this key can be just a list of attributes separated by a \``|`\`. For CP-ABE it can also be a Policy Tree including boolean formulas.
 
 ```
 /encrypt
@@ -107,6 +107,7 @@ params:
 Example:
 * KP-ABE: `encrypt?scheme=kp&key=Doctor|Floor=2&plaintext=Hello World!`
 * CP-ABE: `encrypt?scheme=cp&key=Doctor and Floor<=4&plaintext=Hello World!`
+
 #### Decryption
 Decrypts a specified ciphertext with the user's previously generated key. 
 
