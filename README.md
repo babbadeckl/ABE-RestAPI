@@ -8,8 +8,8 @@ It supports Encryption, Decryption and Key Generation for Key-Policy Attribute B
 ## Docker Image / Container setup
 
 ```
-$ docker pull babbadeckl/abe-api:v1.0
-$ docker run -p <port>:12345 -it babbadeckl/abe-api:v1.0
+$ docker pull babbadeckl/abe-api:v1.4
+$ docker run -p <port>:12345 -it babbadeckl/abe-api:v1.4
 ```
 
 ## Manual Installation
